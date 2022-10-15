@@ -17,7 +17,7 @@ String email = "";
 
 
 class _RegisterState extends State<Register> {
-  var addUserInform = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -212,13 +212,8 @@ class _RegisterState extends State<Register> {
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
                             onPressed: () {
-                              if (addUserInform = true){
-                              Navigator.pushNamed(context, '/login');
-                              } else {
-                                Fluttertoast.showToast(
-                                    msg: "Server or Internet Error, Please Try Again!",
-                                    gravity: ToastGravity.CENTER);
-                              }
+                              register();
+
                               },
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.blue,
@@ -232,7 +227,7 @@ class _RegisterState extends State<Register> {
             )));
   }
   void register() async{
-    String registerURL = 'http://localhost:8080/calmpet/addUser';
+    String registerURL = 'http://localhost:8010/calmpet/user/addUser';
     Dio dio = new Dio();
 
     var response = await dio.post(
@@ -240,11 +235,15 @@ class _RegisterState extends State<Register> {
         data: {'username' : username,'password' : password , 'email' : email});
 
     if (response.statusCode == 200) {
-      addUserInform = true;
-    } else if (response.data == "success"){
-      addUserInform = true;
-    } else {
-      addUserInform = false;
+      // register success
+      Navigator.pushNamed(context, '/login');
+    }  else {
+      // failed
+      Fluttertoast.showToast(
+          msg: "register failed, Please Try Again!",
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.red,
+          webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
     }
   }
 }

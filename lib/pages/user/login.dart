@@ -161,7 +161,9 @@ class _LoginState extends State<Login> {
     bool status = realData["success"];
     if (status == false) {
       Fluttertoast.showToast(msg: "User name or password incorrect, please check",
-          gravity: ToastGravity.CENTER);
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.red,
+      webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
     } else {
       Navigator.pushNamed(context, "/tabs");
     }
