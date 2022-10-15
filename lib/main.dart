@@ -6,7 +6,6 @@ import 'package:front_end/pages/tabs/ProjectionMode.dart';
 import 'package:front_end/pages/tabs/Setting.dart';
 import 'package:front_end/pages/tabs/StartAnimal.dart';
 import 'package:front_end/pages/tabs/StartAnimal2.dart';
-import 'package:front_end/pages/tabs/Timetable.dart';
 import 'pages/tabs.dart';
 import 'pages/user/login.dart';
 import 'pages/user/register.dart';
@@ -29,7 +28,6 @@ class MyApp extends StatelessWidget {
         '/tabs': (context) => Tabs(),
         '/setting': (context) => Setting(),
         '/register': (context) => Register(),
-        '/timetable': (context) => TimeTable(),
         '/start': (context) => StartAnimal(),
         '/start2': (context) => StartAnimal2(),
         '/classData': (context) => ClassData(),
