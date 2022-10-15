@@ -227,7 +227,7 @@ class _RegisterState extends State<Register> {
             )));
   }
   void register() async{
-    String registerURL = 'http://localhost:8010/calmpet/user/addUser';
+    String registerURL = 'http://13.54.165.206:8010/calmpet/user/addUser';
     Dio dio = new Dio();
 
     var response = await dio.post(

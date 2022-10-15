@@ -147,7 +147,7 @@ class _LoginState extends State<Login> {
 
   void login() async {
     String loginURL =
-        'http://localhost:8010/calmpet/user?username=${username}&password=${password}';
+        'http://13.54.165.206:8010/calmpet/user?username=${username}&password=${password}';
     Dio dio = new Dio();
 
     var response = await dio.get(loginURL);
