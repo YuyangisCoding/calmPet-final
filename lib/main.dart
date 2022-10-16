@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, library_private_types_in_public_api, unused_field
 
 import 'package:flutter/material.dart';
-import 'package:front_end/pages/tabs/ClassData.dart';
-import 'package:front_end/pages/tabs/ProjectionMode.dart';
-import 'package:front_end/pages/tabs/Setting.dart';
-import 'package:front_end/pages/tabs/StartAnimal.dart';
-import 'package:front_end/pages/tabs/StartAnimal2.dart';
+import 'package:Calmpet/pages/tabs/ClassData.dart';
+import 'package:Calmpet/pages/tabs/ProjectionMode.dart';
+import 'package:Calmpet/pages/tabs/Setting.dart';
+import 'package:Calmpet/pages/tabs/StartAnimal.dart';
+import 'package:Calmpet/pages/tabs/StartAnimal2.dart';
 import 'pages/tabs.dart';
 import 'pages/user/login.dart';
 import 'pages/user/register.dart';
