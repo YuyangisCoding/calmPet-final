@@ -143,7 +143,7 @@ class _StartAnimalState extends State<StartAnimal2> {
                     ),
                   ),
                   child: Text(
-                    checkNoise() ? "HIGH" : "Well Down!",
+                    checkNoise() ? "oh no, too loud!" : "Well done!",
                     style: const TextStyle(fontSize: 18),
                   )),
               SizedBox(
