@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50.0)),
-                            // hintText: 'First Name',
+                            hintText: 'First Name',
                             prefixIcon: Icon(Icons.person),
                             filled: true,
                             fillColor: Color.fromARGB(51, 5, 20, 110)),
@@ -90,7 +90,7 @@ class _LoginState extends State<Login> {
                         decoration: InputDecoration(
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50.0)),
-                            // hintText: "123456",
+                            hintText: "123456",
                             prefixIcon: Icon(Icons.lock),
                             filled: true,
                             fillColor: Color.fromARGB(51, 5, 20, 110)),
