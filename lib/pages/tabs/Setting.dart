@@ -94,7 +94,7 @@ class _SettingState extends State<Setting> {
                     child: GestureDetector(
                       behavior: HitTestBehavior.opaque,
                       onTap: () {
-                        Navigator.pushNamed(context, '/login');
+                        Navigator.of(context).popUntil((route) => route.isFirst);
                       },
                       child: Container(
                         decoration: BoxDecoration(

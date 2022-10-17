@@ -147,8 +147,8 @@ class _StartAnimalState extends State<StartAnimal> {
                     style: const TextStyle(fontSize: 18),
                   )),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.6,
-                height: MediaQuery.of(context).size.width * 0.6,
+                width: MediaQuery.of(context).size.width * 1.2,
+                height: MediaQuery.of(context).size.width * 1.2,
                 child: Image.asset(
                     checkNoise() ? "images/sad2.png" : "images/happy2.png"),
               ),
