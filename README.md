@@ -52,6 +52,9 @@ We are using AWS EC2 to host Tomcat server. This server is meant to support
 login and register functions. That means you can log in and register anywhere in the 
 world for our calmpet flutter app. You can skip below and just use app without any hassles;)
 
+If you want to log in our AWS server, please email me with your public key, I will add your key and you will be able to
+ssh into our server to see what we are doing:)  (of course, teachers only)
+
 If you want to, however, build this server yourself, you can do it quite easily.
 Spring-boot project can be found [here](https://github.com/YuyangisCoding/calmpetSQL.git) or from blackBoard submission
 
