@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:Calmpet/main.dart' as main;
 
 class Setting extends StatefulWidget {
   const Setting({Key? key}) : super(key: key);
@@ -95,6 +96,7 @@ class _SettingState extends State<Setting> {
                       behavior: HitTestBehavior.opaque,
                       onTap: () {
                         Navigator.of(context).popUntil((route) => route.isFirst);
+                        main.isLoggedIn = false;
                       },
                       child: Container(
                         decoration: BoxDecoration(

@@ -62,6 +62,10 @@ class _VideoAppState extends State<VideoApp> {
                 child: FloatingActionButton(
                   onPressed: (){
                     //action code for button 2
+                    // stop video
+                    if (_controller.value.isPlaying) {
+                      _controller.pause();
+                    }
                     Navigator.pushNamed(context, '/tabs');
                   },
                   backgroundColor: Colors.deepPurpleAccent,

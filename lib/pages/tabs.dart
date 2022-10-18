@@ -48,7 +48,9 @@ class _TabsState extends State<Tabs> {
             GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: () {
-                Navigator.pushNamed(context, getDirection(image_num));
+                if(image_num != 2) {
+                  Navigator.pushNamed(context, getDirection(image_num));
+                }
               },
               child: Container(
                   width: 100,

@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
+import 'package:Calmpet/main.dart' as main;
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -123,66 +125,7 @@ class _RegisterState extends State<Register> {
                         style: TextStyle(fontFamily: 'test', fontSize: 17.0)),
                   ),
                   SizedBox(height: 15.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Text("Grade",
-                              style: TextStyle(
-                                  fontFamily: 'test',
-                                  fontSize: 18.0,
-                                  color: Color.fromARGB(255, 253, 230, 230))),
-                          SizedBox(width: 60.0)
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Text("Class",
-                              style: TextStyle(
-                                  fontFamily: 'test',
-                                  fontSize: 18.0,
-                                  color: Color.fromARGB(255, 253, 230, 230))),
-                          SizedBox(width: 50.0)
-                        ],
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 10.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        width: 100.0,
-                        height: 30.0,
-                        child: TextField(
-                            textAlignVertical: TextAlignVertical.bottom,
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(50.0)),
-                                hintText: "11",
-                                filled: true,
-                                fillColor: Color.fromARGB(51, 5, 20, 110)),
-                            style:
-                                TextStyle(fontFamily: 'test', fontSize: 17.0)),
-                      ),
-                      SizedBox(width: 10.0),
-                      SizedBox(
-                        width: 100.0,
-                        height: 30.0,
-                        child: TextField(
-                            textAlignVertical: TextAlignVertical.bottom,
-                            decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(50.0)),
-                                hintText: "01-A",
-                                filled: true,
-                                fillColor: Color.fromARGB(51, 5, 20, 110)),
-                            style:
-                                TextStyle(fontFamily: 'test', fontSize: 17.0)),
-                      ),
-                    ],
-                  ),
+
                   SizedBox(
                     height: 90.0,
                   ),
@@ -196,8 +139,13 @@ class _RegisterState extends State<Register> {
                             child: Text("Cancle",
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
-                            onPressed: () =>
-                                Navigator.pushNamed(context, '/login'),
+                            onPressed: () {
+                              if (main.isLoggedIn) {
+                                Navigator.pushNamed(context, '/setting');
+                              } else {
+                                Navigator.pushNamed(context, '/login');
+                              }
+                            },
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.orange,
                                 shape: RoundedRectangleBorder(
@@ -226,7 +174,15 @@ class _RegisterState extends State<Register> {
               ),
             )));
   }
-  void register() async{
+  void register() async {
+    if (username == "" || password == "" || email == "") {
+      Fluttertoast.showToast(
+          msg: "Do not leave fields blank, Please Try Again!",
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.red,
+          webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
+      return;
+    }
     String registerURL = 'http://13.54.165.206:8010/calmpet/user/addUser';
     Dio dio = new Dio();
 
@@ -245,5 +201,9 @@ class _RegisterState extends State<Register> {
           backgroundColor: Colors.red,
           webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
     }
+    // reset
+     username = "";
+     password = "";
+     email = "";
   }
 }

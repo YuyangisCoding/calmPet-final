@@ -11,6 +11,8 @@ import 'pages/user/login.dart';
 import 'pages/user/register.dart';
 import 'pages/tabs/video.dart';
 
+bool isLoggedIn = false;
+
 void main() {
   runApp(MyApp());
 }

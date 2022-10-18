@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'package:Calmpet/main.dart' as main;
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -165,6 +167,7 @@ class _LoginState extends State<Login> {
           backgroundColor: Colors.red,
       webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
     } else {
+      main.isLoggedIn = true;
       Navigator.pushNamed(context, "/tabs");
     }
 

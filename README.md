@@ -57,7 +57,7 @@ provide to you, which will build tables automatically.
 3. Before proceeding to the next step, we need to make sure ip addresses specified in the 
 frontend flutter project **_match_** tomcat server ip. That is 127.0.0.1:8010 if you 
 purely run in localhost. Localhost will work for simulator test, but not real iPhone devices.
-To check ip addresses, go to login.dart(line 150) and register.dart(line 230), which are
+To check ip addresses, go to login.dart(line 152) and register.dart(line 186), which are
 located in flutter_project/lib/pages/user. Then go and check spring-boot project
 calmpetSQL/src/main/resources/application.yml
 4. in the springboot project directory,
