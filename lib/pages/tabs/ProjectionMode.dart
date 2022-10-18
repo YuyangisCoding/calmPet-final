@@ -47,7 +47,6 @@ class _ProjectionModeState extends State<ProjectionMode> {
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(50.0)),
                         hintText: 'an integer',
-                        prefixIcon: Icon(Icons.person),
                         filled: true,
                         fillColor: Color.fromARGB(51, 5, 20, 110)),
                     onChanged: (value) {

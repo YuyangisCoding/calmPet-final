@@ -107,29 +107,6 @@ class _TabsState extends State<Tabs> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 GestureDetector(
-                  behavior: HitTestBehavior.opaque,
-                  onTap: () {
-                    Navigator.pushNamed(context, '/timetable');
-                  },
-                  child: Container(
-                      width: 100,
-                      height: 40,
-                      margin: EdgeInsets.all(5),
-                      padding: EdgeInsets.all(5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("images/bottombutton.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Text("timetable",
-                          style: TextStyle(
-                              fontFamily: 'test',
-                              fontSize: 16.0,
-                              color: Color.fromARGB(255, 253, 230, 230)))),
-                ),
-                GestureDetector(
                     behavior: HitTestBehavior.opaque,
                     onTap: () {
                       Navigator.pushNamed(context, '/setting');
