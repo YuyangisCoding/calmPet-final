@@ -76,7 +76,8 @@ I am available 24/7 during marking period ;)
 If you found login or resigter is not responding, then it's likely that AWS failed for some reasons,
 please contact me immediately if this happens. Also check your internet connection and/or internet permissions.  
 If app failed to run on real iPhone devices, please check the signing step && make sure device management and developer mode are all set
-in setting.
+in setting.  
+If microphone is not fired up, it's possible that you do not grant microphone permission in iPhone setting.
 
 Thank you!
 
