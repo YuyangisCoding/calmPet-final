@@ -21,7 +21,9 @@ class _VideoAppState extends State<VideoApp> {
         'assets/1.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
+        setState(() {
+          _controller.play();
+        });
       });
   }
 
@@ -30,17 +32,40 @@ class _VideoAppState extends State<VideoApp> {
     return MaterialApp(
       title: 'Video Demo',
       home: Scaffold(
-        body: Center(
-          child: _controller.value.isInitialized
-              ? AspectRatio(
-            aspectRatio: _controller.value.aspectRatio,
-            child: VideoPlayer(_controller),
-          )
-              : Container(),
+        body: Container(
+          child: Center(
+            child: _controller.value.isInitialized
+                ? AspectRatio(
+              aspectRatio: _controller.value.aspectRatio,
+              child: VideoPlayer(_controller),
+            )
+                : Container(),
+          ),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/startbg.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
         floatingActionButton:Wrap( //will break to another line on overflow
           direction: Axis.horizontal, //use vertical to show  on vertical axis
           children: <Widget>[
+            Container(
+                margin:EdgeInsets.all(10),
+                child: FloatingActionButton(
+                  onPressed: (){
+                    //action code for button 2
+                    // stop video
+                    if (_controller.value.isPlaying) {
+                      _controller.pause();
+                    }
+                    Navigator.pushNamed(context, '/tabs');
+                  },
+                  backgroundColor: Colors.deepPurpleAccent,
+                  child: Icon(Icons.arrow_back_ios_new),
+                )
+            ),
             Container(
                 margin:EdgeInsets.all(10),
                 child: FloatingActionButton(
@@ -55,24 +80,6 @@ class _VideoAppState extends State<VideoApp> {
                     _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
                   ),
             )),
-            //button first
-
-            Container(
-                margin:EdgeInsets.all(10),
-                child: FloatingActionButton(
-                  onPressed: (){
-                    //action code for button 2
-                    // stop video
-                    if (_controller.value.isPlaying) {
-                      _controller.pause();
-                    }
-                    Navigator.pushNamed(context, '/tabs');
-                  },
-                  backgroundColor: Colors.deepPurpleAccent,
-                  child: Icon(Icons.arrow_back_rounded),
-                )
-            ), // button second
-            // Add more buttons here
           ],
         ),
 
