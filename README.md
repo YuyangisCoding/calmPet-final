@@ -41,12 +41,13 @@ in this guide. Make sure you have internet connection for either simulator or iP
    project directory, which seems easier and less error-prone. Wait a few seconds, you
    should be able to see calmpet in iPhone homepage!
 
-# Database and Tomcat server
+# Database and Tomcat server (a spring-boot project)
 We are using AWS EC2 to host Tomcat server. This server is meant to support 
 login and register functions. That means you can log in and register anywhere in the 
 world for our calmpet flutter app. You can skip below and just use app without any hassles;)
 
-If you want to, however, build this server yourself, you can do it quite easily.  
+If you want to, however, build this server yourself, you can do it quite easily.
+Spring-boot project can be found [here](https://github.com/YuyangisCoding/calmpetSQL.git) or from blackBoard submission
 
 0. assuming you have brew or apt-get package manager.
 1. install mysql-server on machine that you want to use as a server.
