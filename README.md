@@ -39,11 +39,13 @@ First of all, run **_"flutter pub get"_** in the project directory to grab depen
    devices, then grab **_simulator_device_id_** at the second column of output and
    run **__flutter run -d simulator_device_id__**
    * **_run on real iPhone devices_**  
-   This is a bit complicated, you have to sign app for your devices in Xcode first.
+   This is a bit complicated, you have to sign app for your devices in Xcode first. We recommend using your 
+   own apple identity to sign it. Do not click triangle to run directly as this will not be a release build thus app will not stay
+   in your phone after disconnecting with Mac  
    Please read this detailed [guide](https://medium.com/front-end-weekly/how-to-test-your-flutter-ios-app-on-your-ios-device-75924bfd75a8)  
-   Once you have signed in xcode, instead of build and run directly from xcode, we can run _flutter -d real_device_id --release_ in the 
-   project directory, which seems easier and less error-prone. Wait a few seconds, you
-   should be able to see calmpet in iPhone homepage!
+   Once you have signed in xcode, make sure that you connect iPhone to Mac and select the device, then go to menu
+   Product->Build for->profiling to build and then Product->perform action->profile without building  
+   You are all set now, I hope
 
 # Database and Tomcat server (a spring-boot project)
 We are using AWS EC2 to host Tomcat server. This server is meant to support 
