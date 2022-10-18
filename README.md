@@ -1,9 +1,9 @@
-# DECO3801 calmpet project  
-# Team: 7 up
+# DECO3801 calmpet project (Team: 7 up)
 <img src="https://raw.githubusercontent.com/YuyangisCoding/calmPet-final/main/images/calmpetIcon.png" width="200" height="200" />
 
 This project is aiming for a smooth transition from class break to start of the class
-by collecting class noise and making interactive cute animals. 
+by collecting class noise and making interactive cute animals.  
+Our github location: https://github.com/YuyangisCoding/calmPet-final.git  
 This project is the prototyping implementation of [this proposal](https://github.com/YuyangisCoding/calmPet-final/raw/main/007%20Disruptive%20Classroom%20transition%20times.pdf) from DECO3800 
 
 # Compiling and building instructions
