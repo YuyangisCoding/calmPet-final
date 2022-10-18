@@ -26,12 +26,14 @@ Doctor summary (to see all details, run flutter doctor -v):
 [✓] Android Studio (version 2021.3)  
 [✓] IntelliJ IDEA Ultimate Edition (version 2022.2.3)  
 [✓] IntelliJ IDEA Ultimate Edition (version 2022.2.3)  
-[✓] Connected device (3 available)
+[✓] Connected device (3 available)  
 [✓] HTTP Host Availability  
 • No issues found!
 3. Next, we will compile and run it, guides will be slightly different 
 depending on what platforms you are going to use. I will only show IOS platform 
-in this guide. Make sure you have internet connection for either simulator or iPhone because login and register need it. 
+in this guide. Make sure you have internet connection for either simulator or iPhone because login and register need it.
+
+First of all, run **_"flutter pub get"_** in the project directory to grab dependencies.  
    * **_run on ios simulator_**  
    You should open simulator.app first, then run _flutter devices_ to see available 
    devices, then grab **_simulator_device_id_** at the second column of output and
