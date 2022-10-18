@@ -17,7 +17,22 @@ class _ProjectionModeState extends State<ProjectionMode> {
             centerTitle: true,
             toolbarHeight: 50),
         body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("images/startbg.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Text(
+              "Upcoming...",
+              style: TextStyle(color: Colors.deepOrange,
+                  fontSize: 30,
+                  fontFamily: 'test'),
+            ),
+          ),
+        )
 
-        ));
+        );
   }
 }
