@@ -46,7 +46,7 @@ We are using AWS EC2 to host Tomcat server. This server is meant to support
 login and register functions. That means you can log in and register anywhere in the 
 world for our calmpet flutter app. You can skip below and just use app without any hassles;)
 
-If you want to, however, build this server yourself, you can do it quite easily.
+If you want to, however, build this server yourself, you can do it quite easily.  
 0. assuming you have brew or apt-get package manager.
 1. install mysql-server on machine that you want to use as a server.
 Create a database called calmpet under root user with password 12345678. Then run calmpet.sql that we 
