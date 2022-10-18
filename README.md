@@ -8,7 +8,8 @@ by collecting class noise and making interactive cute animals.
 # Compiling and building instructions
 We recommend to use macOs for building project. Target should be ios devices, 
 because it is fully tested, running on other platform
-may work but may have subtle compatibility bugs. 
+may work but may have subtle compatibility bugs. Please make sure you test this app in quiet place, otherwise
+it will never enter last phase.
 
 
 1. Install [flutter](https://docs.flutter.dev/get-started/install)
