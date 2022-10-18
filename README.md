@@ -73,5 +73,8 @@ We try to be careful, mistakes do happen.
 Should you have any trouble compiling/running this project,  
 Please email me at _yuyang.zhang1@uqconnect.edu.au_, 
 I am available 24/7 during marking period ;)
+If you found login or resigter is not responding, then it's likely that AWS failed for some reasons,
+please contact me immediately if this happens. Also check your internet connection and/or internet permissions
 
+Thank you!
 
