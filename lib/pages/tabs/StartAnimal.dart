@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:noise_meter/noise_meter.dart';
+import 'package:Calmpet/main.dart' as main;
 
 class StartAnimal extends StatefulWidget {
   const StartAnimal({Key? key}) : super(key: key);
@@ -95,7 +96,7 @@ class _StartAnimalState extends State<StartAnimal> {
   }
 
   bool checkNoise() {
-    if (num.parse(meanDb.toStringAsFixed(2)) > 61) {
+    if (num.parse(meanDb.toStringAsFixed(2)) > main.db_level) {
       if ((ignore != 0) && (time2Num(now) > showsUntil)) {
         // ignore three noise point
         ignore = ignore - 1;

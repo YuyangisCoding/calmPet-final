@@ -12,6 +12,7 @@ import 'pages/user/register.dart';
 import 'pages/tabs/video.dart';
 
 bool isLoggedIn = false;
+int db_level = 61;
 
 void main() {
   runApp(MyApp());

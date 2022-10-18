@@ -81,7 +81,7 @@ class _SettingState extends State<Setting> {
                         height: MediaQuery.of(context).size.height * 0.08,
                         alignment: Alignment.center,
                         // color: Colors.white,
-                        child: Text("Projection\nMode",
+                        child: Text("Noise setting",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'test',
