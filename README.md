@@ -4,6 +4,7 @@
 
 This project is aiming for a smooth transition from class break to start of the class
 by collecting class noise and making interactive cute animals. 
+This project is the prototyping implementation of [this proposal](https://github.com/YuyangisCoding/calmPet-final/raw/main/007%20Disruptive%20Classroom%20transition%20times.pdf) from DECO3800 
 
 # Compiling and building instructions
 We recommend to use macOs for building project. Target should be ios devices, 
