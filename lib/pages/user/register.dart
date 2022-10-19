@@ -111,6 +111,7 @@ class _RegisterState extends State<Register> {
                     width: 210.0,
                     height: 30.0,
                     child: TextField(
+                        obscureText: true,
                         textAlignVertical: TextAlignVertical.bottom,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(

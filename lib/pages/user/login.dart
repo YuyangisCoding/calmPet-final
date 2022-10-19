@@ -87,6 +87,7 @@ class _LoginState extends State<Login> {
                     width: 210.0,
                     height: 35.0,
                     child: TextField(
+                        obscureText: true,
                         textAlignVertical: TextAlignVertical.bottom,
                         controller: passwordController,
                         decoration: InputDecoration(
