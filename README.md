@@ -38,9 +38,11 @@ First of all, run **_"flutter pub get"_** in the project directory to grab depen
    * **_run on ios simulator_**  
    You should open simulator.app first, then run _flutter devices_ to see available 
    devices, then grab **_simulator_device_id_** at the second column of output and
-   run **__flutter run -d simulator_device_id__**
+   run **__flutter run -d simulator_device_id__**  
+   This run command will take some time, **please be patient**. If you see blank screen on ios simulator, it's likely that 
+   build file is not fully flushed to simulator.
    * **_run on real iPhone devices_**  
-   A paid apple developer account is recommanded because free one has limited number of registered devices.  
+   A paid apple developer account is recommended because free one has limited number of registered devices.  
    This is a bit complicated and you are likely to encounter issues. You have to sign app for your devices in Xcode first. We recommend using your 
    own apple identity to sign it. Do not click triangle to run directly as this will not be a release build thus app will not stay
    in your phone after disconnecting with Mac  
