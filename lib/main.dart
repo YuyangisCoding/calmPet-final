@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:Calmpet/pages/tabs/ClassData.dart';
-import 'package:Calmpet/pages/tabs/ProjectionMode.dart';
+import 'package:Calmpet/pages/tabs/noiseSetting.dart';
 import 'package:Calmpet/pages/tabs/Setting.dart';
 import 'package:Calmpet/pages/tabs/StartAnimal.dart';
 import 'package:Calmpet/pages/tabs/StartAnimal2.dart';
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         '/start': (context) => StartAnimal(),
         '/start2': (context) => StartAnimal2(),
         '/classData': (context) => ClassData(),
-        '/projectionMode': (context) => ProjectionMode(),
+        '/projectionMode': (context) => noiseSetting(),
         '/video' : (context) => VideoApp(),
       },
     );

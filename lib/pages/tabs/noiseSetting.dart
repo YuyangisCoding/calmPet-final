@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:Calmpet/main.dart' as main;
 
-class ProjectionMode extends StatefulWidget {
-  const ProjectionMode({Key? key}) : super(key: key);
+class noiseSetting extends StatefulWidget {
+  const noiseSetting({Key? key}) : super(key: key);
 
   @override
-  _ProjectionModeState createState() => _ProjectionModeState();
+  _noiseSettingState createState() => _noiseSettingState();
 }
 
-class _ProjectionModeState extends State<ProjectionMode> {
+class _noiseSettingState extends State<noiseSetting> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +26,7 @@ class _ProjectionModeState extends State<ProjectionMode> {
           ),
           child: Column(
             children: [
+              SizedBox(height: 50,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -37,6 +38,7 @@ class _ProjectionModeState extends State<ProjectionMode> {
                   SizedBox(width: 120.0)
                 ],
               ),
+              SizedBox(height: 30,),
               SizedBox(
                 width: 210.0,
                 height: 35.0,
@@ -54,7 +56,7 @@ class _ProjectionModeState extends State<ProjectionMode> {
                     },
                     style: TextStyle(fontFamily: 'test', fontSize: 20.0)),
               ),
-              SizedBox(height: 5.0),
+              SizedBox(height: 20.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
