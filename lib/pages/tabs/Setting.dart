@@ -109,7 +109,7 @@ class _SettingState extends State<Setting> {
                         height: MediaQuery.of(context).size.height * 0.07,
                         alignment: Alignment.center,
                         // color: Colors.white,
-                        child: Text("Logged Out",
+                        child: Text("Log Out",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'test',

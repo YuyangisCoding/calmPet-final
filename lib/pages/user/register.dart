@@ -140,6 +140,7 @@ class _RegisterState extends State<Register> {
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
                             onPressed: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
                               if (main.isLoggedIn) {
                                 Navigator.pushNamed(context, '/setting');
                               } else {
@@ -160,6 +161,7 @@ class _RegisterState extends State<Register> {
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
                             onPressed: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
                               register();
 
                               },

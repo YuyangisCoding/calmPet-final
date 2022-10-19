@@ -116,6 +116,7 @@ class _LoginState extends State<Login> {
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
                             onPressed: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
                               login();
                                 },
                             style: ElevatedButton.styleFrom(
@@ -131,8 +132,10 @@ class _LoginState extends State<Login> {
                             child: Text("Register",
                                 style: TextStyle(
                                     fontFamily: 'test', fontSize: 16.0)),
-                            onPressed: () =>
-                                Navigator.pushNamed(context, '/register'),
+                            onPressed: () {
+                              FocusManager.instance.primaryFocus?.unfocus();
+                              Navigator.pushNamed(context, '/register');
+                            },
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.blue,
                                 shape: RoundedRectangleBorder(

@@ -68,6 +68,7 @@ class _noiseSettingState extends State<noiseSetting> {
                             style: TextStyle(
                                 fontFamily: 'test', fontSize: 16.0)),
                         onPressed: () {
+                          FocusManager.instance.primaryFocus?.unfocus();
                           Navigator.pushNamed(context, '/tabs');
                         },
                         style: ElevatedButton.styleFrom(
