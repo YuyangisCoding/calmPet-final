@@ -32,6 +32,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 3. Next, we will compile and run it, guides will be slightly different 
 depending on what platforms you are going to use. I will only show IOS platform 
 in this guide. Make sure you have internet connection for either simulator or iPhone because login and register need it.
+We recommand using simulator for simplicity.
 
 First of all, run **_"flutter pub get"_** in the project directory to grab dependencies.  
    * **_run on ios simulator_**  
@@ -39,10 +40,12 @@ First of all, run **_"flutter pub get"_** in the project directory to grab depen
    devices, then grab **_simulator_device_id_** at the second column of output and
    run **__flutter run -d simulator_device_id__**
    * **_run on real iPhone devices_**  
-   This is a bit complicated, you have to sign app for your devices in Xcode first. We recommend using your 
+   A paid apple developer account is recommanded because free one has limited number of registered devices.  
+   This is a bit complicated and you are likely to encounter issues. You have to sign app for your devices in Xcode first. We recommend using your 
    own apple identity to sign it. Do not click triangle to run directly as this will not be a release build thus app will not stay
    in your phone after disconnecting with Mac  
-   Please read this detailed [guide](https://medium.com/front-end-weekly/how-to-test-your-flutter-ios-app-on-your-ios-device-75924bfd75a8)  
+   Please read this detailed [guide](https://medium.com/front-end-weekly/how-to-test-your-flutter-ios-app-on-your-ios-device-75924bfd75a8).  
+   Also make sure you run _pod install_ in ios folder of this project.  
    Once you have configured signing in xcode, make sure that you connect iPhone to Mac and select the device, then go to menu
    _Product->Build for->profiling_ to build and then _Product->perform action->profile without building_  
    You are all good now, I hope
