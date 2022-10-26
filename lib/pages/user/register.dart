@@ -192,6 +192,17 @@ class _RegisterState extends State<Register> {
         registerURL,
         data: {'username' : username,'password' : password , 'email' : email});
 
+    print(response.data);
+
+    if (response.data["code"] == 405) {
+      Fluttertoast.showToast(
+          msg: "user already exists, try another name",
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.red,
+          webBgColor: "linear-gradient(to right, #ff0000, #ff0000)");
+      return;
+    }
+
     if (response.statusCode == 200) {
       // register success
       Navigator.pushNamed(context, '/login');
