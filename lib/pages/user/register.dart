@@ -141,11 +141,12 @@ class _RegisterState extends State<Register> {
                                     fontFamily: 'test', fontSize: 16.0)),
                             onPressed: () {
                               FocusManager.instance.primaryFocus?.unfocus();
-                              if (main.isLoggedIn) {
-                                Navigator.pushNamed(context, '/setting');
-                              } else {
-                                Navigator.pushNamed(context, '/login');
-                              }
+                              Navigator.pop(context);
+                              // if (main.isLoggedIn) {
+                              //   Navigator.pushNamed(context, '/setting');
+                              // } else {
+                              //   Navigator.pushNamed(context, '/login');
+                              // }
                             },
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.orange,
