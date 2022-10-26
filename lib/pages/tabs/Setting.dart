@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:Calmpet/main.dart' as main;
+
+import 'package:Calmpet/pages/user/login.dart' as login;
 
 class Setting extends StatefulWidget {
   const Setting({Key? key}) : super(key: key);
@@ -95,6 +99,8 @@ class _SettingState extends State<Setting> {
                     child: GestureDetector(
                       behavior: HitTestBehavior.opaque,
                       onTap: () {
+                        login.passwordController.clear();
+                        login.usernameController.clear();
                         Navigator.of(context).popUntil((route) => route.isFirst);
                         main.isLoggedIn = false;
                       },

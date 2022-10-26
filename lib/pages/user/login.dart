@@ -8,6 +8,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:Calmpet/main.dart' as main;
 
+TextEditingController usernameController = new TextEditingController();
+TextEditingController passwordController = new TextEditingController();
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -24,8 +27,7 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController usernameController = new TextEditingController();
-    TextEditingController passwordController = new TextEditingController();
+
 
     return Scaffold(
         body: Container(
